@@ -1,0 +1,134 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f9f9f9;
+    color: #333;
+    background: linear-gradient(to top, #dfe9f3 0%, white 100%);
+}
+
+.contact-container {
+    width: 90%;
+    max-width: 1200px;
+    margin: auto;
+    display: grid;
+    grid-template-rows: 30% 70%;
+    gap: 20px;
+    
+}
+
+header {
+    background-color: #ffffff;
+    padding: 20px;
+    border-bottom: 1px solid #ddd;
+    text-align: center;
+    background: linear-gradient(to top, #cfd9df 0%, #e2ebf0 100%);
+}
+
+header h1 {
+    margin: 0;
+    color: #007bff;
+}
+
+header p {
+    margin: 10px 0;
+    color: #555;
+}
+
+main {
+    background-color: #ffffff;
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    display: grid;
+    grid-template-columns: 3fr 7fr; /* Adjusted for 70% and 30% widths */
+    gap: 20px;
+    background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+}
+
+.feedback-form {
+    background-color: #ffffff;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: box-shadow 0.3s ease;
+    background: radial-gradient(circle at 10% 20%, rgba(216, 241, 230, 0.46) 0.1%, rgba(233, 226, 226, 0.28) 90.1%);
+}
+
+.feedback-form:hover {
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.contact-info {
+    background-color: #ffffff;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: box-shadow 0.3s ease;
+}
+
+.contact-info:hover {
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.info-item {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.info-item i {
+    font-size: 24px;
+    color: #007bff;
+    
+}
+
+.info-details {
+    display: flex;
+    flex-direction: column;
+    
+}
+
+.info-details h2 {
+    margin: 0;
+    color: #007bff;
+}
+
+.feedback-form h2 {
+    margin-top: 0;
+    color: #007bff;
+}
+
+.feedback-form table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 20px;
+}
+
+.feedback-form td {
+    padding: 10px;
+}
+
+.feedback-form input, 
+.feedback-form textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+}
+
+.feedback-form button {
+    background-color: #007bff;
+    color: #ffffff;
+    border: none;
+    padding: 10px;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.feedback-form button:hover {
+    background-color: #0056b3;
+}
