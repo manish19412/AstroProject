@@ -1,0 +1,122 @@
+body {
+    margin: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: url('https://upload.wikimedia.org/wikipedia/commons/1/1c/Solar_eclipse_2017_illustration.jpg') no-repeat center center fixed; 
+    background-size: cover;
+    overflow: hidden;
+}
+
+body::before {
+    content: '';
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRLPrmqc26UVi4NPvK2UO6ao1j3ATMdqqyCuA&s");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    filter: blur(10px);
+    z-index: -1;
+}
+
+.grid-container {
+    display: grid;
+    grid-template-columns: 1fr 1.5fr;
+    grid-template-rows: 1fr;
+    height: 100vh;
+    gap: 20px;
+    padding: 20px;
+    overflow: hidden;
+}
+
+.image-wrapper {
+    grid-column: 1 / 2;
+    grid-row: 1 / 2;
+    position: relative;
+    overflow: hidden;
+    border-radius: 10px;
+    background-image: url('https://upload.wikimedia.org/wikipedia/commons/1/1c/Solar_eclipse_2017_illustration.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 100%;
+}
+
+.image-wrapper img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    filter: brightness(70%);
+    transition: filter 0.3s ease;
+}
+
+.image-wrapper:hover img {
+    filter: brightness(100%);
+}
+
+.text-wrapper {
+    grid-column: 2 / 3;
+    grid-row: 1 / 2;
+    padding: 20px;
+    background: linear-gradient(135deg, #ffcc00, #ff3300); /* Gradient from yellow to red */
+    color: #4c4a4a; /* White text color for high contrast */
+    border-radius: 10px;
+    overflow-y: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.text-wrapper:hover {
+    background: linear-gradient(135deg, #ff3300, #ffcc00); /* Invert gradient on hover */
+    color: #000000; /* Change text color to black on hover */
+}
+
+.text-wrapper h1 {
+    margin: 0;
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: inherit; /* Use inherited color */
+    transition: color 0.3s ease;
+}
+
+.text-wrapper:hover h1 {
+    color: #000000; /* Change text color to black on hover */
+}
+
+.text-content {
+    display: grid;
+    gap: 20px;
+}
+
+.text-section {
+    margin: 0;
+}
+
+.text-section h2 {
+    font-size: 1.8rem;
+    margin-bottom: 10px;
+    transition: color 0.3s ease;
+}
+
+.text-section p, .text-section ul {
+    font-size: 1rem;
+    line-height: 1.5;
+}
+
+.text-section ul {
+    list-style-type: disc;
+    padding-left: 20px;
+}
+
+.text-section ul li {
+    margin: 5px 0;
+    transition: color 0.3s ease;
+}
+
+.text-section ul li:hover {
+    color: #007bff; /* Change color on hover for list items */
+}

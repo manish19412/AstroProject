@@ -1,0 +1,125 @@
+body {
+    margin: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: url('https://i.insider.com/508415426bb3f77d74000010?width=600&format=jpeg&auto=webp') no-repeat center center fixed; 
+    background-size: cover;
+    overflow: hidden;
+}
+body::before {
+    content: '';
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url('https://i.insider.com/508415426bb3f77d74000010?width=600&format=jpeg&auto=webp');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    filter: blur(10px);
+    z-index: -1;
+}
+
+.grid-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    grid-template-areas: 
+        "image-overlay content-container"
+        "image-overlay content-container";
+    height: 100vh;
+    gap: 20px;
+    padding: 20px;
+}
+
+.image-overlay {
+    grid-area: image-overlay;
+    position: relative;
+    overflow: hidden;
+    border-radius: 50%; /* Makes the container circular */
+    clip-path: circle(50% at center); /* Ensures the image fits the circular shape */
+    transition: transform 0.3s ease-in-out;
+    width: 100%;
+    height: 100%;
+}
+
+.image-overlay img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Ensures the image covers the circular container without distortion */
+    filter: brightness(60%);
+    transition: filter 0.3s ease;
+}
+
+.image-overlay:hover {
+    transform: scale(1.1);
+}
+
+.image-overlay:hover img {
+    filter: brightness(100%);
+}
+
+.content-container {
+    grid-area: content-container;
+    padding: 20px;
+    background: rgba(0, 0, 0, 0.8);
+    color: #ffffff;
+    border-radius: 10px;
+    overflow-y: auto;
+    transition: background 0.3s ease;
+}
+
+.content-container:hover {
+    background: linear-gradient(to top, #09203f 0%, #537895 100%);
+}
+
+.content-container h1 {
+    margin: 0;
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: #ebdb29;
+    transition: color 0.3s ease;
+}
+
+.content-container:hover h1 {
+    color: #070909; /* Change heading color to black on hover */
+}
+
+.text-content {
+    display: grid;
+    gap: 20px;
+}
+
+.text-section {
+    margin: 0;
+}
+
+.text-section h2 {
+    font-size: 1.8rem;
+    margin-bottom: 10px;
+    color: #746d6d;
+    transition: color 0.3s ease;
+}
+
+.content-container:hover .text-section h2 {
+    color: black; /* Change heading color to black on hover */
+}
+
+.text-section p, .text-section ul {
+    font-size: 1rem;
+    line-height: 1.5;
+}
+
+.text-section ul {
+    list-style-type: disc;
+    padding-left: 20px;
+}
+
+.text-section ul li {
+    margin: 5px 0;
+    transition: color 0.3s ease;
+}
+
+.text-section ul li:hover {
+    color: #bae8e8; /* Change color to a bright blue on hover */
+}

@@ -1,0 +1,145 @@
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #0d0d0d;
+    color: #ffffff;
+    overflow-y: scroll;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+body::before {
+    content: '';
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url('https://cdn.pixabay.com/photo/2018/07/05/09/21/blue-moon-3507513_960_720.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    filter: blur(8px);
+    z-index: -1;
+}
+.container {
+    width: 90%;
+    max-width: 1000px;
+    margin: 20px;
+    padding: 20px;
+    /* background: rgba(0, 0, 0, 0.8); */
+    background: linear-gradient(to top, rgb(9, 32, 63) 0%, rgb(83, 120, 149) 100%);
+    border-radius: 15px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.5);
+    position: relative;
+    overflow: hidden; /* Ensure no content overflow */
+}
+
+header {
+    text-align: center;
+    margin-bottom: 20px;
+    z-index: 1; /* Ensure heading is on top */
+    position: relative;
+}
+
+header h1 {
+    font-size: 3em;
+    color: #00bfff;
+    background: linear-gradient(109.6deg, rgb(36, 45, 57) 11.2%, rgb(16, 37, 60) 51.2%, rgb(0, 0, 0) 98.6%);
+    text-transform: uppercase;
+    border-radius: 15px;
+    letter-spacing: 3px;
+    transition: color 0.3s ease, transform 0.3s ease;
+    animation: fadeInDown 1.5s ease-in-out;
+}
+
+header h1:hover {
+    color: #095ea8;
+    transform: scale(1.05);
+}
+
+header p {
+    font-size: 1.5em;
+    color: #ffffff;
+}
+
+main {
+    display: grid;
+    grid-template-rows: auto 1fr;
+    gap: 20px;
+    text-align: center;
+}
+
+.image {
+    border-radius: 15px;
+    overflow: hidden;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+.image:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 20px rgba(255, 255, 255, 0.5);
+}
+
+.text {
+    /* background-color: rgba(0, 0, 0, 0.7); */
+    background: linear-gradient(109.6deg, rgb(36, 45, 57) 11.2%, rgb(16, 37, 60) 51.2%, rgb(0, 0, 0) 98.6%);
+    padding: 20px;
+    border-radius: 10px;
+    text-align: left;
+    animation: fadeInUp 1.5s ease-in-out;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.text p {
+    font-size: 1.2em;
+    line-height: 1.6;
+    color: #e6e6fa;
+    margin: 15px 0;
+}
+
+.text:hover {
+    transform: scale(1.02);
+    box-shadow: 0 0 15px rgba(255, 255, 255, 0.5);
+}
+
+footer {
+    text-align: center;
+    margin-top: 20px;
+}
+
+footer p {
+    font-size: 1.2em;
+    color: #ffffff;
+}
+
+@keyframes fadeInDown {
+    from {
+        transform: translateY(-20px);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+@keyframes fadeInUp {
+    from {
+        transform: translateY(20px);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}

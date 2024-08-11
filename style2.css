@@ -1,0 +1,142 @@
+/* Basic Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;   
+}
+body::before {
+    content: '';
+    position: fixed; /* Keeps the background image fixed on the viewport */
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url('https://upload.wikimedia.org/wikipedia/commons/8/8b/Perseid_Meteor_Shower_%28201508130002HQ%29.jpg');
+    background-size: cover; /* Makes sure the image covers the entire element */
+    background-repeat: no-repeat; /* Prevents the image from repeating */
+    background-position: center; /* Centers the image */
+    filter: blur(10px); /* Adjust the blur intensity as needed */
+    z-index: -1; /* Places the background image behind other content */
+  }
+/* Body Styling */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #000000;
+    color: #ffffff;
+    line-height: 1.6;
+    
+}
+
+/* Header Styling */
+.header {
+    background-color: #1a1a1a;
+    padding: 20px;
+    text-align: center;
+    border-bottom: 2px solid #333;
+}
+
+.header-component {
+    text-decoration: none;
+    color: #fff;
+    font-size: 24px;
+    transition: color 0.3s ease;
+}
+
+.header-component:hover {
+    color: #a3e3cf;
+}
+
+/* Grid Container for Intro Section */
+.grid-container {
+    display: grid;
+    grid-template-columns: 1fr 2fr; /* One column for image, larger column for text */
+    gap: 20px;
+    padding: 20px;
+    align-items: center; /* Vertically centers the items */
+    animation: fadeIn 2s ease; /* Animation on load */
+}
+
+/* Hover and Animation Effects on Image */
+.image img {
+    width: 100%;
+    border-radius: 10px;
+    transition: transform 0.5s ease, box-shadow 0.5s ease;
+}
+
+.image img:hover {
+    transform: scale(1.05); /* Slight zoom on hover */
+    box-shadow: 0 0 15px 5px rgba(236, 236, 234, 0.7); /* Glow effect */
+}
+
+/* Hover and Animation Effects on Text */
+.text h1 {
+    font-size: 36px;
+    margin-bottom: 20px;
+    color: #ffcc00;
+    transition: color 0.3s ease;
+    animation: slideIn 2s ease; /* Animation on load */
+}
+
+.text p {
+    margin-bottom: 20px;
+    font-size: 18px;
+    transition: color 0.3s ease, transform 0.5s ease;
+    animation: slideIn 2s ease;
+}
+
+.text:hover h1 {
+    /* Add any effects on h1 hover here */
+}
+
+.text:hover p {
+    color: #000000; /* Change text color on hover */
+    background: rgb(255, 255, 255);
+    transform: scale(1.05); /* Slight zoom on hover */
+}
+
+/* Keyframes for Animations */
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+@keyframes slideIn {
+    from { transform: translateX(-20px); opacity: 0; }
+    to { transform: translateX(0); opacity: 1; }
+}
+
+/* Details Section Styling */
+.details {
+    padding: 20px;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.details h2 {
+    font-size: 28px;
+    margin-bottom: 10px;
+    color: #ffcc00;
+}
+
+.details ul {
+    list-style-type: disc;
+    margin-left: 20px;
+}
+
+.details li {
+    margin-bottom: 10px;
+    font-size: 18px;
+}
+
+/* Footer Styling */
+.footer {
+    background-color: #1a1a1a;
+    text-align: center;
+    padding: 10px;
+    border-top: 2px solid #333;
+}
+
+.footer p {
+    color: #fff;
+    font-size: 16px;
+}
